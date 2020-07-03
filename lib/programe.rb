@@ -1,6 +1,6 @@
+require 'date'
 class Programe
   def initialize
-    @day_of_the_week = Date.today.strftime('%A')
     @breakfast_meal = [
       'Banana Peanut Butter Chia Pudding',
       'Quinoa and Chia Porridge',
@@ -22,7 +22,7 @@ class Programe
   end
 
   def welcome
-    "Today is #{@day_of_the_week}
+    "
     1. For meals select /meals
     2. For meetings select /meetings
     3. To exit select /stop"
@@ -31,11 +31,11 @@ class Programe
   def meals
     "Your breakfast is : #{@breakfast_meal.sample} !
     Your Lunch will be : #{@lunch_meal.sample} !
-    Then you will have : #{@dinner_meal.sample} for dinner! "
+    Then you will have : #{@dinner_meal.sample} for dinner!"
   end
 
   def meetings
-    if @day_of_the_week == 'Saturday' || @day_of_the_week == 'Sunday'
+    if Date.today.strftime('%A') == 'Saturday' || Date.today.strftime('%A') == 'Sunday'
       "You don't have a meeting today"
     else
       'You have a standup meeting today'

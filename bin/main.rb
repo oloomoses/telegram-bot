@@ -15,7 +15,7 @@ bot.get_updates(fail_silently: true) do |message|
   message.reply do |reply|
     case command
     when /start/i
-      reply.text = "Welcome #{message.from.first_name}\n #{programe.welcome}"
+      reply.text = "Welcome #{message.from.first_name}\n #Today is #{Date.today.strftime('%A')}\n#{programe.welcome}"
     when /meals/i
       reply.text = programe.meals
     when /meetings/i
