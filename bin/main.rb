@@ -3,26 +3,28 @@ require_relative '../lib/programe.rb'
 
 programe = Programe.new
 
-token = '1238539456:AAGtDmfd0OT7dDW936mTTuXcEKwjxiwzadU'
+token = ENV['TG_API_KEY']
 
-bot = TelegramBot.new(token: token)
+puts token
 
-bot.get_updates(fail_silently: true) do |message|
-  puts "@#{message.from.username}: #{message.text}"
+# bot = TelegramBot.new(token: token)
 
-  command = message.get_command_for(bot)
+# bot.get_updates(fail_silently: true) do |message|
+#   puts "@#{message.from.username}: #{message.text}"
 
-  message.reply do |reply|
-    case command
-    when /start/i
-      reply.text = "Welcome #{message.from.first_name}\n #Today is #{Date.today.strftime('%A')}\n#{programe.welcome}"
-    when /meals/i
-      reply.text = programe.meals
-    when /meetings/i
-      reply.text = programe.meetings
-    when /stop/i
-      reply.text = "Goodbye #{message.from.first_name}"
-    end
-    reply.send_with(bot)
-  end
-end
+#   command = message.get_command_for(bot)
+
+#   message.reply do |reply|
+#     case command
+#     when /start/i
+#       reply.text = "Welcome #{message.from.first_name}\n #Today is #{Date.today.strftime('%A')}\n#{programe.welcome}"
+#     when /meals/i
+#       reply.text = programe.meals
+#     when /meetings/i
+#       reply.text = programe.meetings
+#     when /stop/i
+#       reply.text = "Goodbye #{message.from.first_name}"
+#     end
+#     reply.send_with(bot)
+#   end
+# end
