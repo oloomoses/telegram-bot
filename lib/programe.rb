@@ -29,9 +29,10 @@ class Programe
   end
 
   def meals
-    "Your breakfast is : #{@breakfast_meal.sample} !
-    Your Lunch will be : #{@lunch_meal.sample} !
-    Then you will have : #{@dinner_meal.sample} for dinner!"
+    "
+    1. Your breakfast is : #{@breakfast_meal.sample} !
+    2. Your Lunch will be : #{@lunch_meal.sample} !
+    3. Then you will have : #{@dinner_meal.sample} for dinner!"
   end
 
   def meetings
