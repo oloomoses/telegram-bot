@@ -1,10 +1,9 @@
 # Telegram Bot - Capstone Projects
 
-This is my ruby capstone project where I created a telegram bot. As a remote developer, I realised that I waste alot of time trying to figure out my daily meals.
-because of this I find it helpfull to have a bot that can suggest meal, for example breakfast, lunch and dinner. I named my boat `meealsbot`
+This is my ruby capstone project where I created a telegram bot. As a remote developer, I realized that I waste a lot of time trying to figure out my daily meals. because of this, I find it helpful to have a bot that can suggest meals, for example, breakfast, lunch, and dinner. I named my boat `meealsbot`
 
 1. There boat will remind you which day of the week it is
-2. The boat suggest for you meals for the day
+2. The boat suggest for your meals for the day
 
 ## Prerequisites
 
